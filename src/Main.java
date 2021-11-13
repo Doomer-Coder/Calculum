@@ -6,7 +6,6 @@ import Maths.*;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println("Testing commits");
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
         String b = scanner.nextLine();
