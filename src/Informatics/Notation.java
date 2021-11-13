@@ -1,8 +1,7 @@
 package Informatics;
 
 public class Notation {
-    private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+    private static final String ALPHABET = alphabetBuilder();
     public static String main(String value, String strBase, String newStrBase) {
         int base;
         int newBase;
@@ -39,7 +38,6 @@ public class Notation {
             functionResult = String.valueOf(decimal);
             return functionResult;
         }
-
         while (decimal != 0) {
             String digit = Long.toString(decimal - decimal / newBase * newBase);
             if (Integer.parseInt(digit) >= 10) {
@@ -78,5 +76,12 @@ public class Notation {
     }
     private static String error() {
         return "Пожалуйста, введите корректное основание системы счисления.";
+    }
+    private static String alphabetBuilder() {
+        String functionResult = "";
+        for (char i = 'A'; i <= 'Z'; i++) {
+            functionResult = functionResult.concat(String.valueOf(i));
+        }
+        return functionResult;
     }
 }
