@@ -1,15 +1,15 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-import Cryptography.*;
-import Informatics.*;
-import Maths.*;
+import cryptography.*;
 
 class Main {
     public static void main(String[] args) {
+        String[] test = {"2"};
+        System.out.println(Arrays.toString(test));
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
         String b = scanner.nextLine();
-        String c = scanner.nextLine();
-        System.out.println(Notation.main(a, b, c));
+        System.out.println(Caesar.code(a, b));
     }
 }

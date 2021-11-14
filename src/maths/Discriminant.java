@@ -1,6 +1,8 @@
-package Maths;
+package maths;
 
-public class Discriminant {
+import standard.Fields;
+
+public class Discriminant extends Fields {
     private static double discriminant;
 
     public static String main(String strA, String strB, String strC) {
@@ -31,7 +33,7 @@ public class Discriminant {
         return answer;
     }
 
-    private static String answerBuilder(double realA, double realB, double realC) {
+    protected static String answerBuilder(double realA, double realB, double realC) {
         String functionResult = "ax² + bx + c = 0\n";
         functionResult += toInteger(realA) + "x² + " + toInteger(realB) + "x + " + toInteger(realC) + " = 0\n";
         functionResult += "D = b² - 4ac\n";
@@ -41,7 +43,7 @@ public class Discriminant {
         return functionResult;
     }
 
-    private static String discriminantIsPositive(double realA, double realB) {
+    protected static String discriminantIsPositive(double realA, double realB) {
         String functionResult = "Так как дискриминант больше нуля =>\n";
         functionResult += "Данное квадратное уравнение имеет два вещественных корня.\n";
         double radixFromD = Math.sqrt(discriminant);
@@ -50,7 +52,7 @@ public class Discriminant {
         return functionResult;
     }
 
-    private static String discriminantIsZero(double realA, double realB) {
+    protected static String discriminantIsZero(double realA, double realB) {
         String outcome = "";
         String functionResult = "Так как дискриминант равен нулю =>\n";
         functionResult += "Данное квадратное уравнение имеет один вещественный корень.\n";
@@ -71,19 +73,19 @@ public class Discriminant {
         return functionResult;
     }
 
-    private static String discriminantIsNegative() {
+    protected static String discriminantIsNegative() {
         String functionResult = "Так как дискриминант меньше нуля =>\n";
         functionResult += "Данное квадратное уравнение не имеет вещественных корней.\n\n";
         functionResult += "Ответ: Вещественных корней нет.";
         return functionResult;
     }
 
-    private static String toInteger(double doubleNum) {
+    protected static String toInteger(double doubleNum) {
         long longNum = (long) doubleNum;
         return (doubleNum == longNum) ? String.valueOf(longNum) : String.valueOf(doubleNum);
     }
 
-    private static boolean isPeriodic(double doubleNum) {
+    protected static boolean isPeriodic(double doubleNum) {
         return true;
     }
 
@@ -100,9 +102,5 @@ public class Discriminant {
         }
         divider = Math.abs(thisNumerator + thisDenominator);
         return new double[] { numerator / divider, denominator / divider };
-    }
-
-    private static String error() {
-        return "Пожалуйста, введите число.";
     }
 }

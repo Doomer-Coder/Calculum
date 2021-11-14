@@ -1,7 +1,8 @@
-package Informatics;
+package informatics;
 
-public class Notation {
-    private static final String ALPHABET = alphabetBuilder();
+import standard.Fields;
+
+public class Notation extends Fields {
     public static String main(String value, String strBase, String newStrBase) {
         int base;
         int newBase;
@@ -24,7 +25,7 @@ public class Notation {
         return answer;
     }
 
-    private static String interpretation(String value, int base, int newBase) {
+    protected static String interpretation(String value, int base, int newBase) {
         String functionResult = "";
 
         if (base == newBase) {
@@ -48,7 +49,7 @@ public class Notation {
         }
         return functionResult;
     }
-    private static String exception(int base, int newBase) {
+    protected static String exception(int base, int newBase) {
         String functionResult;
         String rangeOfNumbers;
         String rangeOfLetters = "";
@@ -74,14 +75,7 @@ public class Notation {
 
         return functionResult;
     }
-    private static String error() {
+    protected static String error() {
         return "Пожалуйста, введите корректное основание системы счисления.";
-    }
-    private static String alphabetBuilder() {
-        String functionResult = "";
-        for (char i = 'A'; i <= 'Z'; i++) {
-            functionResult = functionResult.concat(String.valueOf(i));
-        }
-        return functionResult;
     }
 }
