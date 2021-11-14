@@ -10,7 +10,7 @@ public class Fields {
         }
         return functionResult;
     }
-    protected static String error() {
+    protected static String interpretationError() {
         return "Пожалуйста, введите число.";
     }
 }

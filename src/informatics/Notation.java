@@ -12,7 +12,7 @@ public class Notation extends Fields {
             base = Integer.parseInt(strBase);
             newBase = Integer.parseInt(newStrBase);
         } catch (NumberFormatException e) {
-            answer = error();
+            answer = baseError();
             return answer;
         }
 
@@ -55,7 +55,7 @@ public class Notation extends Fields {
         String rangeOfLetters = "";
 
         if (base <= 1 || 37 <= base || newBase <= 1 || 37 <= newBase) {
-            functionResult = error();
+            functionResult = baseError();
             return functionResult;
         }
 
@@ -75,7 +75,7 @@ public class Notation extends Fields {
 
         return functionResult;
     }
-    protected static String error() {
+    protected static String baseError() {
         return "Пожалуйста, введите корректное основание системы счисления.";
     }
 }

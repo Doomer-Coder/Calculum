@@ -16,7 +16,7 @@ public class Discriminant extends Fields {
             realB = Double.parseDouble(strB.replace(',', '.'));
             realC = Double.parseDouble(strC.replace(',', '.'));
         } catch (NumberFormatException e) {
-            answer = error();
+            answer = interpretationError();
             return answer;
         }
 
