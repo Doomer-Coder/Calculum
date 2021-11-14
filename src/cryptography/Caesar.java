@@ -2,8 +2,6 @@ package cryptography;
 
 import standard.*;
 
-import java.util.Locale;
-
 public class Caesar extends Fields {
     public static String code(String data, String ... strKey) {
         int key;
