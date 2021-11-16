@@ -1,11 +1,9 @@
 package standard;
 
 public class Fields {
-    protected static final String ALPHABET = alphabetBuilder();
-
-    protected static String alphabetBuilder() {
+    protected static String alphabetBuilder(char begin, char end) {
         String functionResult = "";
-        for (char i = 'A'; i <= 'Z'; i++) {
+        for (char i = begin; i <= end; i++) {
             functionResult = functionResult.concat(String.valueOf(i));
         }
         return functionResult;
