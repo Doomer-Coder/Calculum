@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import cryptography.*;
+import cryptography.Caesar;
 import informatics.Notation;
 
 class Main {
